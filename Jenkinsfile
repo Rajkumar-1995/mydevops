@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label 'Node'
 	}
-  stages {
+ stages {
     stage ('checkout') 
       steps 
 	  {
