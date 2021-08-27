@@ -1,18 +1,20 @@
 pipeline {
-	agent any {
+	agent any 
 	label 'Node'
 }
-stages
+stages 
   stage ('cehckout')
  {
 	 steps 
 	 {
-		checkout sm
+	        checkout sm
 	 }
  }
   stage  ('creation of the folder')
     {
 	    steps 
+	    {
 	    sh "cd /home/ubuntu ; sudo mkdir raj12"
-     }
+            }
+    }	    
   }
