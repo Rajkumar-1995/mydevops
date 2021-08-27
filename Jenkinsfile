@@ -1,29 +1,28 @@
 pipeline {
- agent {
- label 'Node'
-}
-stages {
- stage ( 'checkout' )
-{
- steps 
-    {
-	   checkout scm
-    }
-}
- stage ( 'creation of the folder' )
-     {
-	steps
-	{
-		sh "cd /home/ubuntu ; sudo mkdir testfolder "
+	agent {
+		label 'Node'
 	}
-}
- stage ( 'creating the folder on different server ' )
-    {
-	steps {
-		node ( 'my slave' ) {
-	
-	    sh "cd/var/www; sudo mkdir jenkins1
-		}
+	stages {
+	 stage ( 'checkout' )
+	 {
+		 steps
+		 {
+			 checkout scm
+		 }
+	 }
+	 stage ( 'creationf of folder' )
+	 {
+		 steps
+		 {
+			 sh "cd/home/ubuntu ; sudo mkdir raj12"
+		 }
+	 }
+	 stage ( 'creating folder on different server' )
+	 {
+		 steps {
+			 node ( 'my slave' ) {
+				 sh "cd/var/www ; sudo mkdir raj123"
+			 }
+		 }
+	 }
 	}
-}
-}
