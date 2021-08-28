@@ -4,7 +4,7 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Creation of the folder') 
+	stage('Creation of the folder') {
             steps { 
                 sh 'cd /home/ubuntu; sudo mkdir kumar1' 
             }
