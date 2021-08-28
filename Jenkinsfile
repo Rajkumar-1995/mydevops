@@ -15,7 +15,7 @@ stages
 	 steps
 	 {
 		 
-	    sh "cd /home/ubuntu; sudo mkdir raj12"
+	    sh "cd /home/ubuntu ; sudo mkdir raj12"
 		 
 	 }
      }
