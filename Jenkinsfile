@@ -10,17 +10,17 @@ stages{
     }
     stage('creation of the folder'){
         steps{
-            sh 'cd /home/ubuntu; sudo mkdir kumar12'
+            sh 'cd /home/ubuntu; sudo mkdir kumar01'
         }
     }
     stage('creation of the folder1'){
         steps{
-            sh 'cd /home/ubuntu; sudo mkdir kumar13'
+            sh 'cd /home/ubuntu; sudo mkdir kumar02'
         }
     }
     stage('creation of the folder2'){
         steps{
-            sh 'cd /home/ubuntu; sudo mkdir kumar14'
+            sh 'cd /home/ubuntu; sudo mkdir kumar03'
         }
     }
   }
