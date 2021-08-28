@@ -3,11 +3,11 @@ pipeline {
 	label 'Node'
 }
 stages
- stage ('cehckout')
+ stage ('checkout')
  {
 	 steps 
 	 {
-              checkout sm
+              checkout SCM
 	 }
  }
  stage  ('creation of the folder')
@@ -15,7 +15,7 @@ stages
 	 steps
 	 {
 		 
-	    sh "cd /home/ubuntu ; sudo mkdir raj12
+	    sh "cd /home/ubuntu; sudo mkdir raj12"
 		 
 	 }
      }
