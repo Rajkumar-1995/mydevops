@@ -1,7 +1,6 @@
 pipeline { 
     agent any 
     label 'Node' {
-        skipStagesAfterUnstable()
     }
     stages {
 	stage('Creation of the folder') {
