@@ -13,7 +13,7 @@ pipeline {
             steps {
 			     node ( 'my slave' )
 				 
-                sh 'sh cd /home/ubuntu; sudo mkdir kumar2'
+                sh 'cd /home/ubuntu; sudo mkdir kumar2'
      
             }
         }
