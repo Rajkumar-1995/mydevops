@@ -1,6 +1,6 @@
 pipeline { 
-    agent any 
-    label 'Node' {
+	agent any {
+    label 'Node' 
     }
     stages {
 	stage('Creation of the folder') {
