@@ -1,31 +1,22 @@
-pipeline {
-	agent {
-		label 'Node'
-	}
- stages {
-    stage ('checkout') 
-      steps 
-	  {
-            checkout scm
-	  }
+pipeline { 
+    agent any 
+    label 'Node' {
+        skipStagesAfterUnstable()
     }
-    stage('creation of the folder') 
-        {
-      steps {
-	      
-        sh 'cd /home/ubuntu ; sudo mkdir rajkumar01'
+    stages {
+        stage('Creation of the folder') 
+            steps { 
+                sh 'cd /home/ubuntu; sudo mkdir kumar1' 
             }
         }
-    stage ('creating the folder on different server')
-	{
-	steps 
-	    {
-	     node ('my slave')
-		{
-		 
-		 sh "cd /home/ubuntu ; sudo mkdir rajkumar02"
-	
-		 }
-	     }
-       }
-  }
+        stage('Creation of the folder on different server'){
+            steps {
+			     node ( 'my slave' )
+				 
+                sh 'sh cd /home/ubuntu; sudo mkdir kumar2'
+     
+            }
+        }
+        
+    }
+}
