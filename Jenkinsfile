@@ -3,15 +3,15 @@ pipeline {
 	label 'Node'
 }
 stages
- stage ('checkout')
+     stage ('checkout')
  {
 	 steps 
 	 {
               checkout SCM
 	 }
  }
- stage  ('creation of the folder')
-    {
+     stage  ('creation of the folder')
+         {
 	 steps
 	 {
 		 
